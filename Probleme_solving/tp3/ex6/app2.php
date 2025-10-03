@@ -9,7 +9,7 @@ for ($i=1; $i <= $n ; $i++) {
         
     }
     if ($s==$i) {
-        echo("$i est nombre parfait <br>");
+        echo("$i est un nombre parfait <br>");
     }
 }
 ?>
