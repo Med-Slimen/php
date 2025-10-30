@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <figcaption>Inscription</figcaption>
+        <p style="font-style: italic;">Veuillez remplir les champs suivantes</p>
+        <form action="ex6.php" method="post">
+            <label for="">Nom</label>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="">CIN</label>
+            <input type="text" name="cin" id="cin"><br>
+            <label for="">Lieu</label><br>
+            <input type="radio" name="lieu" value="centre" id="centre">
+            <label for="homme">Centre ville</label>
+            <input type="radio" name="lieu" value="banl" id="banl">
+            <label for="femme">Banlieue</label><br>
+            <label for="">Type de biens</label>
+            <select name="Langue" id="Langue">
+                <option value="Francais">--BIENS---</option>
+                <option value="chalet">chalet</option>
+                <option value="villa">villa</option>
+                <option value="chambre">chambre</option>
+                <option value="appartement">appartement</option>
+            </select><br>
+            <label for="">Nombre de jours</label>
+            <input type="number" name="nbrj" id="nbrj"><br>
+            <input type="submit" value="Calculer le prix" name="" id="">
+            <input type="number" value="0" name="prix" id=""><br>
+            <input type="reset" value="Annuler" name="" id="">
+        </form>
+    </fieldset>
+</body>
+
+</html>

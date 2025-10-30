@@ -1,0 +1,3 @@
+<?php
+$prod=array("prod1","prod2","prod3","prod4");
+?>

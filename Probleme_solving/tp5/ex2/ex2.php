@@ -4,7 +4,7 @@ $prenom= $_POST["prenom"];
 $adresse= $_POST["adress"];
 $ville= $_POST["ville"];
 $code=$_POST["code"];
-echo"<table border='3'>
+echo"<table border='3' width='500px'>
     <caption>Confirmation de vos cordonnées</caption>
     <tr>
         <td>nom</td>

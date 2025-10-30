@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <figcaption>Inscription</figcaption>
+        <p style="font-style: italic;">Veuillez remplir les champs suivantes</p>
+        <form action="ex6.php" method="post">
+            <label for="">Nom</label>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="">Prenom</label>
+            <input type="text" name="prenom" id="Prenom"><br>
+            <label for="">Mot de passe</label>
+            <input type="password" name="pass" id="nom"><br>
+            <label for="">Confirmer mot de pass</label>
+            <input type="password" name="cpass" id="nom"><br>
+            <label for="">Age</label>
+            <input type="number" name="age" id="age"><br>
+            <label for="">Votre sexe</label><br>
+            <input type="radio" name="sexe" value="homme" id="homme">
+            <label for="homme">Homme</label>
+            <input type="radio" name="sexe" value="femme" id="femme">
+            <label for="femme">Femme</label><br>
+            <label for="">Langue</label>
+            <select name="Langue" id="Langue">
+                <option value="Francais">Francais</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Englais">Englais</option>
+            </select><br>
+            <select name="loisir" id="">
+                <option value="Cinema">Cinema</option>
+                <option value="Musique">Musique</option>
+                <option value="Sport">Sport</option>
+                <option value="Voyage">Voyage</option>
+            </select>
+            <br>
+            <label for="">Couleurs preferé</label><br>
+            <input type="checkbox" name="color[]" value="bleu" id="">
+            <label for="bleu">Bleu</label>
+            <input type="checkbox" name="color[]" value="rouge" id="">
+            <label for="rouge">Rouge</label>
+            <input type="checkbox" name="color[]" value="vert" id="">
+            <label for="vert">Vert</label>
+            <input type="checkbox" name="color[]" value="autres" id="">
+            <label for="autres">Autres</label><br>
+            <label for="">Commentaire</label>
+            <textarea name="commentaire" id=""></textarea><br>
+            <input type="reset" value="Annuler" name="" id="">
+            <input type="submit" value="Envoyer" name="" id="">
+        </form>
+    </fieldset>
+</body>
+
+</html>
