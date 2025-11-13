@@ -1,13 +1,12 @@
 <?php
 include_once('conn.php');
-$sel=$_POST["sel"];
 $code=$_POST["code"];
 $lib=$_POST["lib"];
 $aut=$_POST["aut"];
 $maison=$_POST["maison"];
 $nbt=$_POST["nbt"];
 $res=false;
-if($sel==1){
+if(isset($_POST["Ajouter"])){
     $sel=$conn->prepare("SELECT * FROM livres where code=?");
     $sel->bindValue(1,$code);
     $sel->execute();
@@ -22,10 +21,16 @@ if($sel==1){
         $query->bindValue(4,$maison);
         $query->bindValue(5,$nbt);
         $query->bindValue(6,$res);
-        $query->execute();
+        if($query->execute()){
+            header("Location: index.php");
+            exit();
+        }
+        else{
+            echo "error";
+        }
     }
 }
-else if($sel==2){
+else if(isset($_POST["Modifier"])){
     $query=$conn->prepare("UPDATE livres set code=?,libelle=?,auteur=?,maison_edit=?,nb_tomes=? where code=?");
     $query->bindValue(1,$code);
     $query->bindValue(2,$lib);
@@ -34,22 +39,24 @@ else if($sel==2){
     $query->bindValue(5,$nbt);
     $query->bindValue(6,$code);
     if($query->execute()){
-        echo"livre modifié";
-    }
-    else{
-        echo"error";
-    }
+            header("Location: index.php");
+            exit();
+        }
+        else{
+            echo "error";
+        }
 
 }
 else{
     $query=$conn->prepare("DELETE FROm livres where code=?");
     $query->bindValue(1,$code);
     if($query->execute()){
-        echo"livre supprimé";
-    }
+        header("Location: index.php");
+        exit();
+        }
     else{
-        echo"error";
-    }
+            echo "error";
+        }
 }
 
 

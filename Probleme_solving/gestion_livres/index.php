@@ -40,12 +40,10 @@ if(isset($_GET["codeR"])){
             <input type="text" name="maison" value="<?php echo $rq["maison_edit"] ?? ""?>" id="maison"><br>
             <label for="">Nombre de tomes</label>
             <input type="number" name="nbt" value="<?php echo $rq["nb_tomes"] ?? "";?>" id="nbt"><br>
-            <select name="sel" id="sel">
-                <option value="1">Ajouter</option>
-                <option value="2">Modifier</option>
-                <option value="3">Supprimer</option>
-            </select><br>
-            <input type="submit" name="" id="">
+            <input type="submit" value="Ajouter" name="Ajouter" id="">
+            <input type="submit" value="Modifier" name="Modifier" id="">
+            <input type="submit" value="Supprimer" name="Supprimer" id="">
+            <input type="button" value="Reset" onclick="r()" name="reset" id="">
         </form>
         
         <h2>Les liste des livres</h2>
@@ -74,5 +72,15 @@ if(isset($_GET["codeR"])){
             ?>
         </table>
     </fieldset>
+    <script>
+        function r(){
+            document.getElementById("code").value="";
+            document.getElementById("lib").value="";
+            document.getElementById("aut").value="";
+            document.getElementById("maison").value="";
+            document.getElementById("nbt").value="";
+        }
+        
+    </script>
 </body>
 </html>
