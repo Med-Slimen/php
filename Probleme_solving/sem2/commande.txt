@@ -1,0 +1,4 @@
+create a new project :
+symfony new --webapp my_project_name
+
+symfony server:start
